@@ -1,13 +1,13 @@
 import React from 'react';
 import Articles from './Articles';
 
-function Home() {
+function AllArticles() {
   return (
     <section>
-      <h1>Home</h1>
+      <h1>All Articles</h1>
       <Articles />
     </section>
   );
 }
 
-export default Home;
+export default AllArticles;
