@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Api from '../api';
 import { capitaliseString } from '../utils';
+import { get_topics } from '../api';
 
 function NavBar() {
   const [loaded, setLoaded] = useState(false);
@@ -10,10 +10,14 @@ function NavBar() {
 
   useEffect(() => {
 
-    fetch(Api.get_topics)
+    fetch(get_topics())
       .then(res => res.json())
       .then(result => {
         setLoaded(true);
+        if (result.msg) {
+          setError(true);
+          return;
+        }
         setTopics(result.topics);
       }, (error) => {
         setError(error);

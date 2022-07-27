@@ -4,6 +4,7 @@ import Layout from './Components/Layout';
 import Home from './Components/Home';
 import AllArticles from './Components/AllArticles';
 import Topic from './Components/Topic';
+import ArticlePage from './Components/ArticlePage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/all-articles" element={<AllArticles />} />
         <Route path="/topic/:topic" element={<Topic />} />
+        <Route path="/article/:article_id" element={<ArticlePage />} />
       </Route>
     </Routes>
   );

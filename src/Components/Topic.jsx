@@ -7,7 +7,7 @@ function Topic(){
   return (
     <section>
       <h1>{capitaliseString(topic)}</h1>
-      <Articles />
+      <Articles subject={topic} />
     </section>
   );
 }
