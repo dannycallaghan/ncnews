@@ -1,9 +1,13 @@
-//import Logo from "../Images/my-logo-2.png";
+import { useContext } from 'react';
+import UserProfileContext from '../UserProfile/UserProfileContext';
 
 function Header() {
+  const userProfile = useContext(UserProfileContext);
+
   return (
     <section className="Header">
       <p>Logo</p>
+      <p>Logged in as {userProfile.username}</p>
     </section>
   );
 }

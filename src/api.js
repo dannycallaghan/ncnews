@@ -27,4 +27,12 @@ export function make_article_vote (id) {
   return `${Api.articles}/${id}`;
 }
 
+export function make_comment (id) {
+  return `${Api.articles}/${id}/comments`;
+}
+
+export function delete_comment (id) {
+  return `${Api.comments}/${id}`;
+}
+
 export default Api;
